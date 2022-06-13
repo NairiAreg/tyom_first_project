@@ -1,3 +1,42 @@
-body {
-    background: #808080;
+
+.nav{
+    display: flex;
+}
+.search{
+    max-width: 400px;
+    margin: 10px;
+}
+.search>input{
+    outline: none;
+    background-color: rgb(223, 215, 215);
+    border-radius: 30px;
+    border: 0;
+    width: 300px;
+    padding: 5px;
+}
+.search>button{
+    border: 0;
+    background-color: white;
+    border-radius: 40px;
+}
+.nav>a{
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    font-weight: bolder;
+    
+}
+a>button{
+    background-color: rgb(223, 215, 215);
+    border: 0;
+    border-radius: 30px;
+    padding: 5px 15px;
+    width: 70px;
+    transition: 0.5s;   
+}   
+
+a>button:hover{
+    letter-spacing: 0.1em;
+    background-color: aqua;
+    transition: 0.5s;
 }
