@@ -1,4 +1,6 @@
-
+*{
+    box-sizing: border-box;
+}
 .nav{
     display: flex;
 }
@@ -6,6 +8,7 @@
     max-width: 400px;
     margin: 10px;
 }
+
 .search>input{
     outline: none;
     background-color: rgb(223, 215, 215);
@@ -13,11 +16,26 @@
     border: 0;
     width: 300px;
     padding: 5px;
+    
 }
+.nav>h3{
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 1;
+}
+.nav>h3:hover{
+    color: rgb(1, 81, 252);
+    transition: 0.3s;
+}
+
 .search>button{
     border: 0;
-    background-color: white;
+    background-color: rgb(223, 215, 215);
     border-radius: 40px;
+    position: relative;  
+    right: 32px;
 }
 .nav>a{
     text-decoration: none;
@@ -27,16 +45,192 @@
     
 }
 a>button{
-    background-color: rgb(223, 215, 215);
+    background-color: white;
     border: 0;
     border-radius: 30px;
     padding: 5px 15px;
     width: 70px;
     transition: 0.5s;   
+    font-weight: 850;
 }   
 
 a>button:hover{
-    letter-spacing: 0.1em;
-    background-color: aqua;
+    color: rgb(1, 81, 252);
     transition: 0.5s;
 }
+
+.lineButt{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.burger>a>i{
+    font-size: x-large;
+    color: #4e4e4e;
+    transition: 0.3s;
+    display: none;
+    z-index: 99;
+}
+
+.burger>a>i:hover{
+    color: rgb(1, 81, 252);
+    transition: 0.3s;
+    transform: rotate(100grad);
+}
+
+.butt>:nth-child(2){
+    margin-right: 5px;
+}
+.butt>button{
+    color: rgb(129, 127, 127);
+    border: 0;
+    background-color: white;
+    transition: 0.3s;
+}
+.butt>button:hover{
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.first{
+    background-color: rgb(223, 215, 215);
+    width: 150px;
+    border-radius:5px;
+    height: 300px;
+}
+#list{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-around;
+}
+#list>li{
+    list-style: none;
+}
+
+#list>li>a{
+    text-decoration: none;
+    color: #4e4e4e;
+    font-weight: 900;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 0.3s;
+}
+
+#list>li>a:hover{
+    color: rgb(1, 81, 252);
+    transition: 0.3s;
+}
+.second{
+    background-color: rgb(223, 215, 215);
+    width: 68%;
+    border-radius:5px;
+}
+
+.grid-container {
+    margin-top: 10px;
+    display: grid;
+    grid-gap: 20px;
+    row-gap: 30px;
+    grid-template-columns:  auto auto auto;
+    color: #444;
+    padding-left: 13px;
+  }
+
+  .grid-item {
+    background-color: white;
+    color: #fff;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    font-size: 150%;
+    max-width: 250px;
+    height: 350px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+.grid-item>img{
+    width: 90%;
+    margin-top: 10px;
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+  
+ @media(max-width:1200px){
+    .grid-container{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .first{
+        display: block;
+    }
+ }
+
+ @media(max-width:826px){
+    .grid-container{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap
+    }
+    
+    .second{
+        width: 350px;
+    }
+    .first{
+        display: block;
+    }
+}
+
+@media(max-width:620px){
+    .grid-container{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap
+    }
+    .burger>a>i{
+        display: inline-block;
+    }
+    
+
+    .first{
+        display: none;
+    }
+    .second{
+        width: 320px;
+    }
+ }
+ @media(max-width:430px){
+    .grid-container{
+    grid-template-columns: auto;
+    
+    }
+    .first{
+        display: none;
+    }
+    .second{
+        width: 320px;
+    }
+ }
+ .grid-item:hover >img{
+    opacity: 0.9;
+ }
+ .grid-item:hover >h5{
+    color: rgb(1, 81, 252);
+ }
+ .grid-item:hover>p{
+    color: rgb(1, 81, 252);
+ }
+ .grid-item>h5{
+     font-style: oblique;
+     font-size: x-large;
+     transition: 0.3s;
+     color: #4e4e4e;
+     padding-top: 20px;
+    }
+    .grid-item>p{
+        font-size: small;
+        font-style: italic;
+        transition: 0.3s;
+        color: #4e4e4e;
+    }
